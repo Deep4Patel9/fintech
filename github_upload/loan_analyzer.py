@@ -30,7 +30,7 @@ print(f"The total value of all loans is: ", total_loans)
 # @TODO: Using the sum of all loans and the total number of loans, calculate the average loan price.
 # Print the average loan amount
 average_loan = total_loans / total_number_loans
-print(f"The average loan amount is: ", average_loan)
+print(f"The average loan amount is {average_loan: .2f}")
 
 """Part 2: Analyze Loan Data.
 
@@ -116,7 +116,7 @@ def present_value_function(future_value, remaining_months, annual_discount_rate)
 # @TODO: Use the function to calculate the present value of the new loan given below.
 #    Use an `annual_discount_rate` of 0.2 for this new loan calculation.
 present_value_function(new_loan.get("future_value"), new_loan.get("remaining_months"), .2)
-print(f"The present value of the loan is: {present_value}")
+print(f"The present value of the loan is: {present_value: .2f}")
 
 
 """Part 4: Conditionally filter lists of loans.
@@ -195,4 +195,3 @@ with open(output_path, 'w', newline='') as csvfile:
     csvwriter.writerow(header)
     for loan in inexpensive_loans:
         csvwriter.writerow(loan.values())
-
